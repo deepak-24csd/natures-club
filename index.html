@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Nature's Club | Sona College of Technology</title>
+  <meta name="description" content="Official website of The Nature's Club at Sona College of Technology. Nurturing campus biodiversity, student terrace gardens, and campus tree mapping.">
+  
+  <!-- Favicon using uploaded logo -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS CUSTOM PROPERTIES - LUSH BOTANICAL GREEN PALETTE
+       ========================================================================== */
+    :root {
+      --forest-deep: #072216;
+      --forest-dark: #0a2d1e;
+      --forest-surface: #0f3d29;
+      --forest-card: #134932;
+      --forest-card-hover: #185a3d;
+      
+      --emerald-dark: #15803d;
+      --emerald: #16a34a;
+      --emerald-light: #22c55e;
+      --leaf: #4ade80;
+      --leaf-bright: #86efac;
+      --mint-glow: #a7f3d0;
+      --solar-amber: #f59e0b;
+      --sun-gold: #fde68a;
+      
+      --cream: #f4f8f1;
+      --cream-surface: #f9fbf8;
+      
+      --text-main: #f0fdf4;
+      --text-muted: #94a3b8;
+      --text-subtle: #cbd5e1;
+      
+      --border-subtle: rgba(74, 222, 128, 0.15);
+      --border-emerald: rgba(74, 222, 128, 0.35);
+      --border-light: rgba(255, 255, 255, 0.12);
+      
+      --glass-bg: rgba(13, 48, 32, 0.72);
+      --glass-card: rgba(15, 54, 36, 0.65);
+      --glass-card-hover: rgba(22, 73, 49, 0.85);
+      --glass-border: rgba(74, 222, 128, 0.22);
+      
+      --whatsapp-green: #25d366;
+      --whatsapp-glow: rgba(37, 211, 102, 0.4);
+      --instagram-pink: #e1306c;
+      
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--forest-deep);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      line-height: 1.65;
+      background: radial-gradient(circle at 15% 10%, rgba(34, 197, 94, 0.18) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 35%, rgba(74, 222, 128, 0.16) 0%, transparent 50%),
+                  radial-gradient(circle at 50% 75%, rgba(16, 185, 129, 0.14) 0%, transparent 55%),
+                  radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+                  linear-gradient(180deg, #072216 0%, #0a2d1e 35%, #082618 70%, #061c12 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Selection Color */
+    ::selection {
+      background-color: rgba(74, 222, 128, 0.35);
+      color: #ffffff;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--forest-deep);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1b6241;
+      border-radius: 5px;
+      border: 2px solid var(--forest-deep);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--emerald-light);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: #ffffff;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .font-serif-heading {
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 20%, #bbf7d0 60%, #4ade80 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-emerald {
+      background: linear-gradient(135deg, #86efac 0%, #4ade80 40%, #22c55e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Layout Utility */
+    .container-custom {
+      width: 100%;
+      max-width: 1220px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Scroll Progress */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, #22c55e, #4ade80, #86efac);
+      z-index: 1000;
+      width: 0%;
+      box-shadow: 0 0 12px rgba(74, 222, 128, 0.8);
+      transition: width 0.05s linear;
+    }
+
+    /* Ambient Flora Glowing Elements */
+    .ambient-glow-1 {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74, 222, 128, 0.16) 0%, rgba(34, 197, 94, 0.04) 50%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.14) 0%, rgba(16, 185, 129, 0.03) 50%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ambient-glow-3 {
+      position: absolute;
+      bottom: 10%;
+      left: 20%;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(134, 239, 172, 0.12) 0%, transparent 70%);
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating Leaves Canvas Particles */
+    .leaf-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .floating-leaf {
+      position: absolute;
+      top: -40px;
+      opacity: 0.55;
+      animation: floatDownAndSway linear infinite;
+      filter: drop-shadow(0 2px 8px rgba(34, 197, 94, 0.3));
+    }
+
+    @keyframes floatDownAndSway {
+      0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.65;
+      }
+      85% {
+        opacity: 0.65;
+      }
+      100% {
+        transform: translateY(105vh) rotate(360deg) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Sticky Glass Navbar */
+    .nav-glass {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 0.9rem 0;
+      background: rgba(10, 45, 30, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+      transition: all 0.3s ease;
+    }
+
+    .nav-glass.scrolled {
+      padding: 0.65rem 0;
+      background: rgba(7, 34, 22, 0.92);
+      border-bottom: 1px solid rgba(74, 222, 128, 0.25);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .nav-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      padding: 0.5rem 0.9rem;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #86efac;
+      background: rgba(74, 222, 128, 0.12);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.85rem;
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 60%, #15803d 100%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: 1px solid rgba(134, 239, 172, 0.4);
+      cursor: pointer;
+      transition: all 0.3s var(--transition-smooth);
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      transition: 0.6s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(34, 197, 94, 0.55);
+      border-color: rgba(134, 239, 172, 0.7);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      background: rgba(255, 255, 255, 0.06);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(74, 222, 128, 0.15);
+      border-color: rgba(74, 222, 128, 0.5);
+      color: #86efac;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 4px 25px var(--whatsapp-glow);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .btn-instagram {
+      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(225, 48, 108, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-instagram:hover {
+      box-shadow: 0 8px 30px rgba(225, 48, 108, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Cards & Glass Containers */
+    .glass-card {
+      background: var(--glass-card);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1.25rem;
+      transition: all 0.35s var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-card:hover {
+      background: var(--glass-card-hover);
+      border-color: rgba(74, 222, 128, 0.45);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 25px rgba(74, 222, 128, 0.15);
+    }
+
+    .glass-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(134, 239, 172, 0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .glass-card:hover::after {
+      opacity: 1;
+    }
+
+    /* Stat Card */
+    .stat-card {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(21, 74, 48, 0.7) 0%, rgba(11, 43, 28, 0.8) 100%);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      border-radius: 1.25rem;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Scroll Reveal */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+      will-change: opacity, transform;
+    }
+
+    .reveal-item.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+
+    /* Custom Cursor Glow */
+    #cursor-glow {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74, 222, 128, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      #cursor-glow {
+        opacity: 1;
+      }
+    }
+
+    /* Timeline Styles */
+    .timeline-container {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(74, 222, 128, 0.2) 0%, rgba(74, 222, 128, 0.6) 50%, rgba(74, 222, 128, 0.2) 100%);
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-line {
+        left: 24px;
+      }
+    }
+
+    /* Lightbox Modal */
+    #lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 18, 11, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    #lightbox-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Back To Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(22, 73, 49, 0.9);
+      border: 1px solid rgba(74, 222, 128, 0.4);
+      color: #86efac;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 800;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    #back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #back-to-top:hover {
+      background: #22c55e;
+      color: #ffffff;
+      border-color: #86efac;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(34, 197, 94, 0.55);
+    }
+
+    /* Pulsing Badge */
+    .pulse-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #4ade80;
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+      }
+    }
+
+    /* Mobile Drawer */
+    #mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(7, 34, 22, 0.98);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 950;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.75rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-15px);
+      transition: all 0.35s var(--transition-smooth);
+    }
+
+    #mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Image Fallback Container */
+    .brand-logo-frame {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(74, 222, 128, 0.12);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      border-radius: 12px;
+      padding: 3px;
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.25);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .floating-leaf, .ambient-glow-1, .ambient-glow-2, .ambient-glow-3 {
+        display: none !important;
+      }
+      .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Mouse Cursor Glow for Desktop -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Floating Leaf SVG Particles (Nature Atmosphere) -->
+  <div class="leaf-container" id="leaf-container" aria-hidden="true"></div>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow-3" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       A. STICKY NAVIGATION (WITH UPLOADED LOGO)
+       ========================================================================== -->
+  <nav class="nav-glass" id="main-navbar" aria-label="Main Navigation">
+    <div class="container-custom" style="display: flex; align-items: center; justify-content: space-between;">
+      
+      <!-- Brand / Logo with logo.png -->
+      <a href="#hero" style="display: flex; align-items: center; gap: 0.85rem; text-decoration: none; z-index: 960;" aria-label="The Nature's Club Sona College of Technology">
+        <div class="brand-logo-frame">
+          <img src="logo.png" alt="The Nature's Club Logo" onerror="this.onerror=null; this.parentElement.innerHTML='<svg viewBox=\'0 0 100 100\' fill=\'none\' style=\'width:100%;height:100%\'><path d=\'M50 8C50 8 72 26 72 52C72 74 58 88 50 94C42 88 28 74 28 52C28 26 50 8 50 8Z\' stroke=\'#4ade80\' stroke-width=\'4\'/><path d=\'M50 20C58 32 63 46 63 56C63 70 54 78 50 82C46 78 37 70 37 56C37 46 42 32 50 20Z\' stroke=\'#34d399\' stroke-width=\'3.5\'/><path d=\'M50 40V68\' stroke=\'#a7f3d0\' stroke-width=\'3.5\'/></svg>'">
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; color: #ffffff; line-height: 1.1;">
+            THE NATURE'S <span style="color: #4ade80;">CLUB</span>
+          </span>
+          <span style="font-size: 0.6875rem; color: #a7f3d0; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;" id="nav-college-tag">
+            Sona College of Technology
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div style="display: none; align-items: center; gap: 0.5rem;" class="md-nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#initiatives" class="nav-link">Initiatives</a>
+        <a href="#activities" class="nav-link">Activities</a>
+        <a href="#ongoing" class="nav-link">Ongoing</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+      </div>
+
+      <!-- Action Button CTA -->
+      <div style="display: flex; align-items: center; gap: 0.85rem;">
+        <a href="#join" class="btn-primary" style="padding: 0.65rem 1.35rem; font-size: 0.875rem; display: none;" id="nav-join-btn">
+          <span>Join Us</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false" style="width: 44px; height: 44px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.25); border-radius: 10px; cursor: pointer; color: #ffffff; padding: 0; z-index: 960;">
+          <span style="width: 20px; height: 2px; background: #ffffff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s;" id="bar1"></span>
+          <span style="width: 20px; height: 2px; background: #ffffff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s;" id="bar2"></span>
+          <span style="width: 20px; height: 2px; background: #ffffff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s;" id="bar3"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" aria-hidden="true">
+    <a href="#hero" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">Home</a>
+    <a href="#about" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">About</a>
+    <a href="#initiatives" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">Initiatives</a>
+    <a href="#activities" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">Activities</a>
+    <a href="#ongoing" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">Ongoing</a>
+    <a href="#gallery" class="mobile-nav-link" style="color: #ffffff; font-size: 1.4rem; font-weight: 600; text-decoration: none;">Gallery</a>
+    <a href="#join" class="btn-primary mobile-nav-link" style="margin-top: 1rem; width: 80%; max-width: 280px;">
+      <span>🌿 Join Nature's Club</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         B. HERO SECTION
+         ========================================================================== -->
+    <section id="hero" style="min-height: 100vh; display: flex; align-items: center; position: relative; padding: 8rem 0 5rem; overflow: hidden;">
+      
+      <!-- Mountain & Botanical Canopy Vector Silhouette -->
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; pointer-events: none; z-index: 1; opacity: 0.45;">
+        <svg viewBox="0 0 1440 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+          <path d="M0 280L60 240C120 200 240 140 360 135C480 130 600 170 720 180C840 190 960 170 1080 145C1200 120 1320 90 1380 75L1440 60V280H0Z" fill="#0d3a24"/>
+          <path d="M0 280L48 250C96 230 192 185 288 175C384 165 480 185 576 200C672 215 768 225 864 210C960 195 1056 155 1152 150C1248 145 1344 175 1392 190L1440 205V280H0Z" fill="#092818"/>
+        </svg>
+      </div>
+
+      <div class="container-custom" style="position: relative; z-index: 2;">
+        <div style="max-width: 860px; margin: 0 auto; text-align: center;">
+          
+          <!-- Logo & Eyebrow Pill -->
+          <div class="reveal-item" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(74, 222, 128, 0.14); border: 1px solid rgba(74, 222, 128, 0.35); padding: 0.5rem 1.25rem; border-radius: 9999px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.15);">
+            <span class="pulse-dot"></span>
+            <span style="font-size: 0.8125rem; font-weight: 700; color: #86efac; letter-spacing: 0.08em; text-transform: uppercase;">
+              THE NATURE'S CLUB • SONA COLLEGE OF TECHNOLOGY
+            </span>
+          </div>
+
+          <!-- Main Hero Headline -->
+          <h1 class="reveal-item stagger-1" style="font-size: clamp(2.75rem, 6.5vw, 5rem); letter-spacing: -0.03em; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.08;">
+            Rooted in <span class="text-gradient-emerald font-serif-heading" style="font-weight: 600;">Nature.</span><br>
+            Driven by <span class="text-gradient">Action.</span>
+          </h1>
+
+          <!-- Supporting Subtitle -->
+          <p class="reveal-item stagger-2" style="font-size: clamp(1.05rem, 2vw, 1.3rem); color: #cbd5e1; max-width: 680px; margin: 0 auto 2.5rem; line-height: 1.7; font-weight: 400;">
+            A student-led environmental community cultivating rooftop terrace gardens, mapping campus biodiversity, and fostering sustainable green habits at <strong style="color: #86efac;">Sona College of Technology</strong>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="reveal-item stagger-3" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.15rem;">
+            <a href="#join" class="btn-primary" style="padding: 1rem 2.25rem; font-size: 1.05rem;">
+              <span>🌿 Join the Movement</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#activities" class="btn-secondary" style="padding: 1rem 2rem; font-size: 1.05rem;">
+              <span>View Timeline & Events</span>
+            </a>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div class="reveal-item stagger-4" style="margin-top: 4.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; opacity: 0.85;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: #a7f3d0; font-weight: 600;">Explore Impact & Stories</span>
+            <a href="#stats" style="color: #4ade80; text-decoration: none; animation: bounceDown 2s infinite;" aria-label="Scroll to statistics">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         C. IMPACT / QUICK STATS (EXACTLY 3 CARDS)
+         ========================================================================== -->
+    <section id="stats" style="padding: 3rem 0 5rem; position: relative; z-index: 10;">
+      <div class="container-custom">
+        <div style="background: rgba(18, 62, 42, 0.6); border: 1px solid rgba(74, 222, 128, 0.28); border-radius: 1.5rem; padding: 2.5rem 2rem; backdrop-filter: blur(14px); box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);">
+          
+          <!-- Exactly 3 cards grid -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;" id="stats-grid">
+            
+            <!-- Stat 1: Students Engaged -->
+            <div class="stat-card reveal-item stagger-1">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">👥</div>
+              <div class="stat-counter" data-target="50" style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: #4ade80; line-height: 1;">0</div>
+              <div style="font-size: 1rem; color: #cbd5e1; font-weight: 600; margin-top: 0.5rem;">Students Engaged</div>
+              <div style="font-size: 0.8125rem; color: #86efac; margin-top: 0.25rem;">Active Volunteers & Participants</div>
+            </div>
+
+            <!-- Stat 2: Saplings Nurtured -->
+            <div class="stat-card reveal-item stagger-2">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌳</div>
+              <div class="stat-counter" data-target="100" style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: #86efac; line-height: 1;">0</div>
+              <div style="font-size: 1rem; color: #cbd5e1; font-weight: 600; margin-top: 0.5rem;">Saplings Nurtured</div>
+              <div style="font-size: 0.8125rem; color: #86efac; margin-top: 0.25rem;">Rooftop Terrace & Campus Grounds</div>
+            </div>
+
+            <!-- Stat 3: Campus Initiatives -->
+            <div class="stat-card reveal-item stagger-3">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏫</div>
+              <div class="stat-counter" data-target="5" style="font-family: var(--font-display); font-size: 3rem; font-weight: 800; color: #a7f3d0; line-height: 1;">0</div>
+              <div style="font-size: 1rem; color: #cbd5e1; font-weight: 600; margin-top: 0.5rem;">Campus Initiatives</div>
+              <div style="font-size: 0.8125rem; color: #86efac; margin-top: 0.25rem;">Tree Mapping, Harvest & Quests</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         D. ABOUT THE CLUB / OUR PURPOSE (CONCISE & PUNCHY)
+         ========================================================================== -->
+    <section id="about" style="padding: 5rem 0 6rem; position: relative;">
+      <div class="container-custom">
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3.5rem; align-items: center;" class="about-grid">
+          
+          <!-- Left Column: Crisp Purpose -->
+          <div class="reveal-item">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem;">
+              <span>OUR PURPOSE</span>
+            </div>
+            
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; margin-bottom: 1.25rem; line-height: 1.15;">
+              More Than a Club.<br>
+              <span class="text-gradient-emerald font-serif-heading">A Green Movement.</span>
+            </h2>
+
+            <p style="font-size: 1.15rem; color: #e2e8f0; line-height: 1.7; margin-bottom: 2rem; font-weight: 400;">
+              At <strong style="color: #86efac;">Sona College of Technology</strong>, Nature's Club turns ecological awareness into real campus action. We unite students to nurture green cover, manage our student terrace garden, map native trees, and build sustainable habits that last a lifetime.
+            </p>
+
+            <!-- 3 Core Values Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;">
+              
+              <div class="glass-card" style="padding: 1.25rem; border-radius: 1rem;">
+                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🌱</div>
+                <h3 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.35rem;">Grow</h3>
+                <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.5;">Cultivating terrace crops, sowing seeds, and expanding green cover.</p>
+              </div>
+
+              <div class="glass-card" style="padding: 1.25rem; border-radius: 1rem;">
+                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🌍</div>
+                <h3 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.35rem;">Protect</h3>
+                <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.5;">Mapping campus tree species, saving water, and reducing plastic.</p>
+              </div>
+
+              <div class="glass-card" style="padding: 1.25rem; border-radius: 1rem;">
+                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🤝</div>
+                <h3 style="font-size: 1.15rem; color: #ffffff; margin-bottom: 0.35rem;">Inspire</h3>
+                <p style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.5;">Hosting Green Heist quests and empowering student environmental leadership.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Right Column: Logo Feature Card -->
+          <div class="reveal-item stagger-2">
+            <div class="glass-card" style="padding: 2.75rem 2rem; border-radius: 1.75rem; background: linear-gradient(145deg, rgba(22, 75, 49, 0.8) 0%, rgba(12, 45, 29, 0.9) 100%); border: 1px solid rgba(74, 222, 128, 0.35); text-align: center; position: relative;">
+              
+              <!-- Real Logo Display -->
+              <div style="width: 140px; height: 140px; margin: 0 auto 1.5rem; background: radial-gradient(circle, rgba(74, 222, 128, 0.25) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; padding: 10px;">
+                <img src="logo.png" alt="Nature's Club Leaf Logo" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 6px 16px rgba(34, 197, 94, 0.4));" onerror="this.onerror=null; this.parentElement.innerHTML='<svg viewBox=\'0 0 100 100\' fill=\'none\' style=\'width:90px;height:90px\'><circle cx=\'50\' cy=\'50\' r=\'44\' stroke=\'#4ade80\' stroke-width=\'2\' stroke-dasharray=\'4 4\'/><path d=\'M50 18C50 18 68 34 68 56C68 74 56 84 50 88C44 84 32 74 32 56C32 34 50 18 50 18Z\' fill=\'#22c55e\' stroke=\'#86efac\' stroke-width=\'2.5\'/><path d=\'M50 30V76\' stroke=\'#ffffff\' stroke-width=\'2\' stroke-linecap=\'round\'/></svg>'">
+              </div>
+
+              <h3 style="font-size: 1.45rem; color: #ffffff; margin-bottom: 0.75rem;">Sona Green Vanguard</h3>
+              <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.65; max-width: 380px; margin: 0 auto 1.75rem;">
+                "Every seed sown today on our terrace and campus grounds is a greener breath for tomorrow."
+              </p>
+
+              <!-- Environmental Pledge Pill -->
+              <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(74, 222, 128, 0.15); border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.6rem 1.35rem; border-radius: 9999px;">
+                <span style="color: #86efac; font-size: 0.875rem; font-weight: 600;">✓ 100% Student-Driven</span>
+                <span style="color: #64748b;">•</span>
+                <span style="color: #fde68a; font-size: 0.875rem; font-weight: 600;">Active in Sona</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         E. OUR INITIATIVES (Green Campus, Every Drop Counts, Eco Awareness)
+         ========================================================================== -->
+    <section id="initiatives" style="padding: 5rem 0 6rem; position: relative;">
+      <div class="container-custom">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;" class="reveal-item">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            <span>CORE ACTION PILLARS</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; margin-bottom: 1rem;">
+            Key Campus <span class="text-gradient-emerald">Initiatives</span>
+          </h2>
+          <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.6;">
+            Action-oriented programs transforming our campus ecology and fostering student sustainability across Sona College of Technology.
+          </p>
+        </div>
+
+        <!-- 3 Initiative Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;" id="initiatives-grid">
+          
+          <!-- Card 1: Green Campus -->
+          <div class="glass-card reveal-item stagger-1" style="padding: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(74, 222, 128, 0.18); display: flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                🌱
+              </div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #86efac; background: rgba(74, 222, 128, 0.12); padding: 0.3rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(74, 222, 128, 0.25);">
+                CAMPUS FLORA
+              </span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: #ffffff;">Green Campus</h3>
+            <p style="font-size: 0.925rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.25rem;">
+              Transforming campus grounds and rooftop spaces into lush green zones with native trees, herbal plants, and student gardening.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.875rem; color: #f0fdf4;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Rooftop terrace garden cultivation</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Native tree plantation drives</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Campus green zone stewardship</li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Every Drop Counts -->
+          <div class="glass-card reveal-item stagger-2" style="padding: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(74, 222, 128, 0.18); display: flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                💧
+              </div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #86efac; background: rgba(74, 222, 128, 0.12); padding: 0.3rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(74, 222, 128, 0.25);">
+                WATER CARE
+              </span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: #ffffff;">Every Drop Counts</h3>
+            <p style="font-size: 0.925rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.25rem;">
+              Promoting water conservation with drip irrigation for terrace plants, tap leak audits, and responsible usage.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.875rem; color: #f0fdf4;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Efficient drip irrigation systems</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Campus tap audit & leak reporting</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Water conservation student drives</li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Eco Awareness -->
+          <div class="glass-card reveal-item stagger-3" style="padding: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(74, 222, 128, 0.18); display: flex; align-items: center; justify-content: center; font-size: 1.65rem;">
+                🌿
+              </div>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #86efac; background: rgba(74, 222, 128, 0.12); padding: 0.3rem 0.75rem; border-radius: 9999px; border: 1px solid rgba(74, 222, 128, 0.25);">
+                EDUCATION & FUN
+              </span>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem; color: #ffffff;">Eco Awareness</h3>
+            <p style="font-size: 0.925rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.25rem;">
+              Engaging students through interactive events like Green Heist, environmental workshops, and harvest festivals.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.875rem; color: #f0fdf4;">
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Green Heist nature quests & games</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> World Environment Day celebrations</li>
+              <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: #4ade80;">✓</span> Organic harvest sales & exhibitions</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         F. ACTIVITIES DONE / TIMELINE (MILESTONES & FUTURE)
+         ========================================================================== -->
+    <section id="activities" style="padding: 5rem 0 6rem; position: relative;">
+      <div class="container-custom">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;" class="reveal-item">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            <span>MILESTONES & EVENTS</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; margin-bottom: 1rem;">
+            Activity <span class="text-gradient-emerald">Timeline</span>
+          </h2>
+          <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.6;">
+            Key environmental milestones, student-driven events, and upcoming journeys on campus.
+          </p>
+        </div>
+
+        <!-- Responsive Activity Timeline Container -->
+        <div class="timeline-container" id="activities-timeline">
+          <!-- Populated from COMPLETED_ACTIVITIES configuration -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         G. ONGOING ACTIVITIES (TERRACE GARDEN & CAMPUS TREE MAP ONLY)
+         ========================================================================== -->
+    <section id="ongoing" style="padding: 5rem 0 6rem; position: relative;">
+      <div class="container-custom">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;" class="reveal-item">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            <span class="pulse-dot"></span>
+            <span>ACTIVE OPERATIONS</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; margin-bottom: 0.75rem;">
+            Ongoing <span class="text-gradient-emerald font-serif-heading">Projects</span>
+          </h2>
+          <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.6;">
+            Continuous environmental projects actively managed by student teams at Sona College of Technology.
+          </p>
+        </div>
+
+        <!-- Ongoing Cards Grid (2 cards) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" id="ongoing-grid">
+          <!-- Populated from ONGOING_PROJECTS configuration -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         H. GALLERY / MOMENTS
+         ========================================================================== -->
+    <section id="gallery" style="padding: 5rem 0 6rem; position: relative;">
+      <div class="container-custom">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 650px; margin: 0 auto 3.5rem;" class="reveal-item">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem;">
+            <span>PHOTO HIGHLIGHTS</span>
+          </div>
+          <h2 style="font-size: clamp(2rem, 4vw, 2.75rem); letter-spacing: -0.02em; margin-bottom: 1rem;">
+            Snapshots in <span class="text-gradient-emerald">Action</span>
+          </h2>
+          <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.6;">
+            Moments of students nurturing the terrace garden, mapping species, and organizing green campus events.
+          </p>
+        </div>
+
+        <!-- Gallery Grid Container -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;" id="gallery-grid">
+          <!-- Populated from GALLERY_IMAGES configuration -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         I. CALL TO ACTION / JOIN CLUB (WHATSAPP INTEGRATION)
+         ========================================================================== -->
+    <section id="join" style="padding: 6rem 0 7rem; position: relative;">
+      <div class="container-custom">
+        <div class="glass-card reveal-item" style="padding: clamp(2.5rem, 5vw, 4.5rem) 2rem; border-radius: 2rem; background: linear-gradient(145deg, rgba(22, 75, 49, 0.85) 0%, rgba(10, 36, 23, 0.95) 100%); border: 1px solid rgba(74, 222, 128, 0.4); text-align: center; position: relative; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);">
+          
+          <!-- Decorative Background Glow in CTA -->
+          <div style="position: absolute; top: -50%; left: 50%; transform: translateX(-50%); width: 450px; height: 450px; background: radial-gradient(circle, rgba(74, 222, 128, 0.3) 0%, transparent 70%); filter: blur(50px); pointer-events: none;"></div>
+
+          <div style="position: relative; z-index: 2; max-width: 680px; margin: 0 auto;">
+            
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(74, 222, 128, 0.15); border: 1px solid rgba(74, 222, 128, 0.35); padding: 0.45rem 1.25rem; border-radius: 9999px; margin-bottom: 1.5rem;">
+              <span style="font-size: 0.8125rem; font-weight: 700; color: #a7f3d0; letter-spacing: 0.08em; text-transform: uppercase;">
+                JOIN OUR STUDENT VOLUNTEER NETWORK
+              </span>
+            </div>
+
+            <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.03em; margin-bottom: 1.25rem; line-height: 1.15;">
+              Be Part of the <span class="text-gradient-emerald font-serif-heading">Change.</span>
+            </h2>
+
+            <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: #cbd5e1; line-height: 1.7; margin-bottom: 2.5rem;">
+              Join The Nature's Club WhatsApp group to take part in upcoming terrace garden shifts, Green Heist events, and campus sustainability drives at Sona College of Technology.
+            </p>
+
+            <!-- WhatsApp Primary CTA Button -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <button id="cta-whatsapp-btn" class="btn-primary btn-whatsapp" style="padding: 1.1rem 2.5rem; font-size: 1.15rem; cursor: pointer; border: none;">
+                <!-- WhatsApp SVG Icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block;">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.42C8.88 7.42 8.63 7.48 8.41 7.72C8.2 7.95 7.58 8.53 7.58 9.71C7.58 10.89 8.44 12.03 8.56 12.19C8.68 12.35 10.24 14.89 12.71 15.86C14.77 16.67 15.19 16.51 15.63 16.47C16.08 16.43 17.07 15.88 17.27 15.31C17.47 14.74 17.47 14.25 17.41 14.15C17.35 14.05 17.2 13.99 16.96 13.87C16.73 13.75 15.58 13.18 15.36 13.1C15.15 13.02 14.99 12.98 14.83 13.22C14.67 13.46 14.22 14.01 14.08 14.17C13.94 14.33 13.8 14.35 13.57 14.23C13.33 14.11 12.58 13.86 11.68 13.06C10.98 12.44 10.5 11.67 10.37 11.43C10.23 11.2 10.35 11.07 10.47 10.95C10.58 10.84 10.72 10.66 10.84 10.52C10.96 10.38 11 10.28 11.08 10.12C11.16 9.96 11.12 9.82 11.06 9.7C11 9.58 10.54 8.46 10.36 7.99C10.17 7.54 9.98 7.6 9.83 7.59C9.69 7.59 9.53 7.58 9.36 7.58L9.04 7.42Z"/>
+                </svg>
+                <span>🌿 Join WhatsApp Community</span>
+              </button>
+
+              <span style="font-size: 0.8125rem; color: #a7f3d0;">
+                Direct WhatsApp Group Community Access • Sona College of Technology
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       J. FOOTER (INSTAGRAM ONLY & NO COPYRIGHT SYMBOL)
+       ========================================================================== -->
+  <footer style="background: #051a11; border-top: 1px solid rgba(74, 222, 128, 0.2); padding: 4.5rem 0 2.5rem; position: relative;">
+    <div class="container-custom">
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3.5rem;">
+        
+        <!-- Col 1: About Brand -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div class="brand-logo-frame" style="width: 40px; height: 40px;">
+              <img src="logo.png" alt="The Nature's Club Logo" onerror="this.onerror=null; this.parentElement.innerHTML='<svg viewBox=\'0 0 100 100\' fill=\'none\' style=\'width:100%;height:100%\'><path d=\'M50 8C50 8 72 26 72 52C72 74 58 88 50 94C42 88 28 74 28 52C28 26 50 8 50 8Z\' stroke=\'#4ade80\' stroke-width=\'4\'/><path d=\'M50 20C58 32 63 46 63 56C63 70 54 78 50 82C46 78 37 70 37 56C37 46 42 32 50 20Z\' stroke=\'#34d399\' stroke-width=\'3.5\'/><path d=\'M50 40V68\' stroke=\'#a7f3d0\' stroke-width=\'3.5\'/></svg>'">
+            </div>
+            <span style="font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; color: #ffffff;">
+              THE NATURE'S <span style="color: #4ade80;">CLUB</span>
+            </span>
+          </div>
+
+          <p style="font-size: 0.925rem; color: #cbd5e1; line-height: 1.65; margin-bottom: 1.25rem;">
+            Empowering students to champion campus biodiversity, cultivate organic terrace gardens, and map indigenous tree species.
+          </p>
+
+          <p style="font-size: 0.875rem; color: #86efac; font-weight: 600;" id="footer-college-name">
+            🏛️ Sona College of Technology Chapter
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 1.25rem; letter-spacing: 0.04em;">Quick Navigation</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.925rem;">
+            <li><a href="#hero" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">Home</a></li>
+            <li><a href="#about" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">About Us</a></li>
+            <li><a href="#initiatives" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">Key Initiatives</a></li>
+            <li><a href="#activities" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">Activity Timeline</a></li>
+            <li><a href="#ongoing" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">Terrace & Mapping Projects</a></li>
+            <li><a href="#gallery" style="color: #cbd5e1; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#4ade80'" onmouseout="this.style.color='#cbd5e1'">Moments Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect With Us (Instagram Only) -->
+        <div>
+          <h4 style="font-size: 1rem; color: #ffffff; margin-bottom: 1.25rem; letter-spacing: 0.04em;">Connect With Us</h4>
+          <p style="font-size: 0.925rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.25rem;">
+            Follow <strong style="color: #86efac;">@the_natures_club_</strong> on Instagram for live terrace garden updates, event photo drops, and student volunteer calls!
+          </p>
+
+          <!-- Instagram Link Button -->
+          <div id="social-links-container">
+            <a href="https://instagram.com/the_natures_club_" target="_blank" rel="noopener noreferrer" class="btn-primary btn-instagram" style="padding: 0.75rem 1.4rem; font-size: 0.925rem; gap: 0.65rem; border-radius: 12px; text-decoration: none;">
+              <!-- Instagram SVG Icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+              <span>Follow @the_natures_club_</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar (No copyright symbol) -->
+      <div style="border-top: 1px solid rgba(74, 222, 128, 0.15); padding-top: 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; font-size: 0.875rem; color: #94a3b8;">
+        <div>
+          2026 Nature's Club • Sona College of Technology. Growing a greener tomorrow.
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem; color: #86efac; font-weight: 600;">
+          <span>🌱 Protect • Nurture • Sustain</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BACK TO TOP FLOATING BUTTON
+       ========================================================================== -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ==========================================================================
+       GALLERY LIGHTBOX MODAL
+       ========================================================================== -->
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Preview">
+    <div style="position: relative; max-width: 900px; width: 100%; max-height: 85vh; display: flex; flex-direction: column; align-items: center;">
+      
+      <!-- Close Button -->
+      <button id="lightbox-close" style="position: absolute; top: -45px; right: 0; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.25rem;">
+        ✕
+      </button>
+
+      <!-- Lightbox Image -->
+      <img id="lightbox-img" src="" alt="" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.8); border: 1px solid rgba(74, 222, 128, 0.3);">
+
+      <!-- Caption -->
+      <div id="lightbox-caption" style="margin-top: 1rem; color: #f0fdf4; font-size: 0.95rem; text-align: center; font-weight: 500;"></div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT CONFIGURATION & INTERACTIVE LOGIC
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       NATURE'S CLUB CONFIGURATION - SONA COLLEGE OF TECHNOLOGY
+       ========================================================================== */
+
+    // 1. WhatsApp Group Invite Link
+    const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/PASTE_YOUR_WHATSAPP_GROUP_LINK_HERE";
+
+    // 2. Club & College Details
+    const CLUB_NAME = "Nature's Club";
+    const COLLEGE_NAME = "Sona College of Technology";
+    const INSTAGRAM_URL = "https://instagram.com/the_natures_club_";
+
+    // 3. Impact Statistics (Exactly 3 cards)
+    const IMPACT_STATS = [
+      { count: 50, suffix: "+", label: "Students Engaged", icon: "👥" },
+      { count: 100, suffix: "+", label: "Saplings Nurtured", icon: "🌳" },
+      { count: 5, suffix: "+", label: "Campus Initiatives", icon: "🏫" }
+    ];
+
+    // 4. Completed & Upcoming Activities Timeline
+    const COMPLETED_ACTIVITIES = [
+      {
+        date: "May 2026",
+        title: "Green Heist",
+        tag: "Campus Quest",
+        icon: "🧭",
+        description: "The organizing of a fun event based on a treasure hunt game where more than 50 students participated and had great fun exploring campus flora and solving nature clues."
+      },
+      {
+        date: "5th June 2026",
+        title: "Terrace Garden Inauguration",
+        tag: "World Environment Day",
+        icon: "🌱",
+        description: "The Inauguration and first seed sowing of the Terrace Garden marking the World Environment Day, featuring an address by the principal to strengthen the campus biodiversity."
+      },
+      {
+        date: "June & July 2026",
+        title: "Campus Tree Mapping Project",
+        tag: "Digital Biodiversity",
+        icon: "🗺️",
+        description: "The Campus Tree Mapping Project with a dedicated website created featuring the details of species, trees, plants, etc. with their interactive map."
+      },
+      {
+        date: "July & August 2026",
+        title: "Terrace Garden Harvest & Sales",
+        tag: "Organic Harvest",
+        icon: "🧺",
+        description: "The sales of the fresh, organic harvest cultivated from the student terrace garden, celebrating the fruits of student-led sustainable farming."
+      },
+      {
+        date: "Future Horizons",
+        title: "Way More to Go!",
+        tag: "Looking Ahead",
+        icon: "🚀",
+        description: "From scaling up our terrace garden crop yield and campus botanical nursery to expanding tree mapping and rolling out green tech innovations — our journey has just begun!"
+      }
+    ];
+
+    // 5. Ongoing Projects (Terrace Garden at 75% & Campus Tree Map at 80%)
+    const ONGOING_PROJECTS = [
+      {
+        title: "Terrace Garden",
+        progress: 75,
+        status: "ACTIVE & GROWING",
+        icon: "🪴",
+        description: "Daily organic maintenance, seed sowing, organic composting, drip irrigation management, and nurturing fresh seasonal vegetable crops on the campus rooftop."
+      },
+      {
+        title: "Campus Tree Map",
+        progress: 80,
+        status: "LIVE PORTAL",
+        icon: "🗺️",
+        description: "Continuous digital documentation, botanical species cataloging, QR code plant tagging, and interactive map maintenance for all campus trees and plants."
+      }
+    ];
+
+    // 6. Gallery Images
+    const GALLERY_IMAGES = [
+      {
+        url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+        caption: "Terrace Garden seed sowing and sapling care",
+        tag: "Terrace Garden"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80",
+        caption: "Campus Tree Mapping & species identification walk",
+        tag: "Tree Mapping"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=800&q=80",
+        caption: "Green Heist treasure hunt student teams in action",
+        tag: "Green Heist"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80",
+        caption: "World Environment Day Inauguration at Sona College",
+        tag: "Inauguration"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80",
+        caption: "Harvesting fresh organic terrace produce",
+        tag: "Harvest & Sales"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
+        caption: "Preserving green biodiversity across Sona campus",
+        tag: "Campus Green"
+      }
+    ];
+
+    /* ==========================================================================
+       CORE APPLICATION LOGIC
+       ========================================================================== */
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initAppContent();
+      initScrollProgress();
+      initNavbarScroll();
+      initMobileMenu();
+      initIntersectionObserver();
+      initFloatingLeaves();
+      initCursorGlow();
+      initGalleryLightbox();
+      initWhatsAppJoinButtons();
+      initBackToTop();
+    });
+
+    // Populate Dynamic Content from Configuration
+    function initAppContent() {
+      // Set College Name in Navbar and Footer
+      const collegeTag = document.getElementById("nav-college-tag");
+      if (collegeTag) collegeTag.textContent = COLLEGE_NAME;
+
+      const footerCollege = document.getElementById("footer-college-name");
+      if (footerCollege) footerCollege.textContent = `🏛️ ${COLLEGE_NAME} Chapter`;
+
+      // Render Activities Timeline (4 events)
+      const timelineContainer = document.getElementById("activities-timeline");
+      if (timelineContainer) {
+        let timelineHTML = '<div class="timeline-line"></div>';
+        COMPLETED_ACTIVITIES.forEach((act, index) => {
+          const isEven = index % 2 === 0;
+          timelineHTML += `
+            <div class="reveal-item" style="position: relative; margin-bottom: 2.75rem; display: flex; flex-direction: column; align-items: ${isEven ? 'flex-start' : 'flex-end'};">
+              
+              <!-- Center Dot on Desktop -->
+              <div style="position: absolute; left: 50%; top: 22px; transform: translateX(-50%); width: 18px; height: 18px; border-radius: 50%; background: #4ade80; border: 3px solid #072216; box-shadow: 0 0 12px rgba(74, 222, 128, 0.8); z-index: 5;" class="timeline-dot"></div>
+
+              <!-- Content Card -->
+              <div class="glass-card" style="width: 100%; max-width: 530px; padding: 1.85rem; border-radius: 1.25rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem; flex-wrap: wrap; gap: 0.5rem;">
+                  <span style="font-size: 0.8125rem; font-weight: 700; color: #86efac; background: rgba(74, 222, 128, 0.15); padding: 0.25rem 0.8rem; border-radius: 9999px; border: 1px solid rgba(74, 222, 128, 0.3);">
+                    ${act.tag}
+                  </span>
+                  <span style="font-size: 0.8125rem; color: #fde68a; font-weight: 700;">
+                    📅 ${act.date}
+                  </span>
+                </div>
+                <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <span>${act.icon}</span> <span>${act.title}</span>
+                </h3>
+                <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.65;">
+                  ${act.description}
+                </p>
+              </div>
+
+            </div>
+          `;
+        });
+        timelineContainer.innerHTML = timelineHTML;
+      }
+
+      // Render Ongoing Projects (Terrace Garden & Campus Tree Map)
+      const ongoingGrid = document.getElementById("ongoing-grid");
+      if (ongoingGrid) {
+        let ongoingHTML = '';
+        ONGOING_PROJECTS.forEach((proj, idx) => {
+          ongoingHTML += `
+            <div class="glass-card reveal-item stagger-${idx + 1}" style="padding: 2.25rem;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+                <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(74, 222, 128, 0.18); display: flex; align-items: center; justify-content: center; font-size: 1.75rem;">
+                  ${proj.icon}
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem; background: rgba(74, 222, 128, 0.15); border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.3rem 0.85rem; border-radius: 9999px;">
+                  <span class="pulse-dot"></span>
+                  <span style="font-size: 0.75rem; font-weight: 700; color: #86efac;">${proj.status}</span>
+                </div>
+              </div>
+
+              <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.65rem;">${proj.title}</h3>
+              <p style="font-size: 0.95rem; color: #cbd5e1; line-height: 1.65; margin-bottom: 1.5rem;">${proj.description}</p>
+
+              <!-- Progress Bar -->
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; margin-bottom: 0.45rem;">
+                  <span style="color: #cbd5e1; font-weight: 500;">Active Deployment Status</span>
+                  <span style="color: #4ade80; font-weight: 700;">${proj.progress}%</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: rgba(255, 255, 255, 0.08); border-radius: 9999px; overflow: hidden;">
+                  <div class="progress-fill" data-progress="${proj.progress}" style="width: 0%; height: 100%; background: linear-gradient(90deg, #22c55e, #4ade80, #86efac); border-radius: 9999px; transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);"></div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        ongoingGrid.innerHTML = ongoingHTML;
+      }
+
+      // Render Gallery
+      const galleryGrid = document.getElementById("gallery-grid");
+      if (galleryGrid) {
+        let galleryHTML = '';
+        GALLERY_IMAGES.forEach((img, idx) => {
+          galleryHTML += `
+            <div class="glass-card reveal-item stagger-${(idx % 4) + 1} gallery-card" data-img-url="${img.url}" data-img-caption="${img.caption}" style="cursor: pointer; position: relative; border-radius: 1.25rem; overflow: hidden; aspect-ratio: 4/3;">
+              <img src="${img.url}" alt="${img.caption}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+              <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7, 34, 22, 0.92) 0%, rgba(7, 34, 22, 0.25) 60%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.25rem; transition: opacity 0.3s;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #86efac; background: rgba(74, 222, 128, 0.2); padding: 0.2rem 0.65rem; border-radius: 9999px; display: inline-block; width: fit-content; margin-bottom: 0.35rem; border: 1px solid rgba(74, 222, 128, 0.3);">
+                  ${img.tag}
+                </span>
+                <p style="font-size: 0.95rem; color: #ffffff; font-weight: 600; line-height: 1.35;">${img.caption}</p>
+              </div>
+            </div>
+          `;
+        });
+        galleryGrid.innerHTML = galleryHTML;
+      }
+    }
+
+    // Scroll Progress Bar
+    function initScrollProgress() {
+      const progressBar = document.getElementById("scroll-progress");
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        if (progressBar) progressBar.style.width = `${progress}%`;
+      }, { passive: true });
+    }
+
+    // Sticky Navbar & Active Section Highlighting
+    function initNavbarScroll() {
+      const navbar = document.getElementById("main-navbar");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("section[id]");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        // Navbar background shift
+        if (scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        // Active Link Highlighting
+        let currentSectionId = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }, { passive: true });
+    }
+
+    // Mobile Hamburger Menu
+    function initMobileMenu() {
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+
+      let isOpen = false;
+
+      function toggleMenu() {
+        isOpen = !isOpen;
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        if (isOpen) {
+          mobileMenu.classList.add("open");
+          bar1.style.transform = "rotate(45deg) translate(5px, 5px)";
+          bar2.style.opacity = "0";
+          bar3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+          document.body.style.overflow = "hidden";
+        } else {
+          mobileMenu.classList.remove("open");
+          bar1.style.transform = "none";
+          bar2.style.opacity = "1";
+          bar3.style.transform = "none";
+          document.body.style.overflow = "";
+        }
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", toggleMenu);
+      }
+
+      mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (isOpen) toggleMenu();
+        });
+      });
+    }
+
+    // Intersection Observer for Scroll Reveals & Counters
+    function initIntersectionObserver() {
+      const revealElements = document.querySelectorAll(".reveal-item");
+
+      const observerOptions = {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+      };
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+
+            // Animate Stat Counters if inside
+            const counters = entry.target.querySelectorAll(".stat-counter");
+            counters.forEach(counter => animateCounter(counter));
+
+            // Animate Progress Bars
+            const progBars = entry.target.querySelectorAll(".progress-fill");
+            progBars.forEach(bar => {
+              const targetProg = bar.getAttribute("data-progress");
+              bar.style.width = `${targetProg}%`;
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // Smooth Number Increment Counter
+    function animateCounter(counter) {
+      const target = parseInt(counter.getAttribute("data-target"), 10);
+      const duration = 1600;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - (1 - progress) * (1 - progress);
+        const currentVal = Math.floor(easeOut * target);
+
+        counter.textContent = `${currentVal}+`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = `${target}+`;
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Floating Leaf SVG Generator
+    function initFloatingLeaves() {
+      const container = document.getElementById("leaf-container");
+      if (!container) return;
+
+      const leafSVG = `
+        <svg viewBox="0 0 30 30" fill="none" style="width: 100%; height: 100%;">
+          <path d="M15 2C15 2 24 9 24 18C24 24 20 28 15 28C10 28 6 24 6 18C6 9 15 2 15 2Z" fill="#4ade80" opacity="0.8"/>
+          <path d="M15 6V26" stroke="#072216" stroke-width="1.2"/>
+        </svg>
+      `;
+
+      const leafCount = 8;
+      for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement("div");
+        leaf.className = "floating-leaf";
+        leaf.innerHTML = leafSVG;
+        
+        const size = Math.random() * 16 + 18;
+        const startX = Math.random() * 95;
+        const delay = Math.random() * 12;
+        const duration = Math.random() * 12 + 16;
+
+        leaf.style.width = `${size}px`;
+        leaf.style.height = `${size}px`;
+        leaf.style.left = `${startX}vw`;
+        leaf.style.animationDelay = `${delay}s`;
+        leaf.style.animationDuration = `${duration}s`;
+
+        container.appendChild(leaf);
+      }
+    }
+
+    // Custom Mouse Glow
+    function initCursorGlow() {
+      const glow = document.getElementById("cursor-glow");
+      if (!glow) return;
+
+      window.addEventListener("pointermove", (e) => {
+        glow.style.left = `${e.clientX}px`;
+        glow.style.top = `${e.clientY}px`;
+      }, { passive: true });
+    }
+
+    // Gallery Lightbox Functionality
+    function initGalleryLightbox() {
+      const modal = document.getElementById("lightbox-modal");
+      const modalImg = document.getElementById("lightbox-img");
+      const modalCaption = document.getElementById("lightbox-caption");
+      const closeBtn = document.getElementById("lightbox-close");
+
+      document.addEventListener("click", (e) => {
+        const card = e.target.closest(".gallery-card");
+        if (card) {
+          const url = card.getAttribute("data-img-url");
+          const caption = card.getAttribute("data-img-caption");
+
+          modalImg.src = url;
+          modalCaption.textContent = caption;
+          modal.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+      });
+
+      function closeModal() {
+        modal.classList.remove("active");
+        modalImg.src = "";
+        document.body.style.overflow = "";
+      }
+
+      if (closeBtn) closeBtn.addEventListener("click", closeModal);
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+          closeModal();
+        }
+      });
+    }
+
+    // WhatsApp CTA Buttons
+    function initWhatsAppJoinButtons() {
+      const ctaBtn = document.getElementById("cta-whatsapp-btn");
+      if (ctaBtn) {
+        ctaBtn.addEventListener("click", () => {
+          window.open(WHATSAPP_GROUP_URL, "_blank", "noopener,noreferrer");
+        });
+      }
+    }
+
+    // Back to Top Button
+    function initBackToTop() {
+      const backToTopBtn = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.add("visible");
+        } else {
+          backToTopBtn.classList.remove("visible");
+        }
+      }, { passive: true });
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    }
+  </script>
+
+  <!-- Responsive CSS Breakpoints Inline -->
+  <style>
+    @media (min-width: 768px) {
+      .md-nav-links {
+        display: flex !important;
+      }
+      #nav-join-btn {
+        display: inline-flex !important;
+      }
+      #menu-toggle {
+        display: none !important;
+      }
+      .about-grid {
+        grid-template-columns: 1.25fr 0.85fr !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .timeline-dot {
+        left: 24px !important;
+      }
+      .timeline-container .glass-card {
+        margin-left: 45px !important;
+        max-width: calc(100% - 45px) !important;
+      }
+    }
+  </style>
+
+</body>
+</html>

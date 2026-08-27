@@ -1,0 +1,6 @@
+{
+  "name": "The Nature's Club - Sona College of Technology",
+  "description": "A vibrant, nature-inspired web portal for The Nature's Club at Sona College of Technology showcasing green initiatives, terrace garden operations, campus tree mapping, and student environmental events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
